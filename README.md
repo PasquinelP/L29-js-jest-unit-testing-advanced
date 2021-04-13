@@ -17,7 +17,7 @@ De functie die we uiteindelijk gaan schrijven moet `verifyPassword` heten. We ge
 We hebben de volgende condities die we gebruiken:
 
 1. password is korter dan 9 karakters
-2. password is niet null
+2. password is niet `null`
 3. password heeft 1 of meer uppercase karakters
 4. password heeft 1 of meer lowercase karakters
 5. password heeft 1 of meer cijfers
