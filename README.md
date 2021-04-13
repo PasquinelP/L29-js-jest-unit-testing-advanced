@@ -24,8 +24,8 @@ We hebben de volgende condities die we gebruiken:
 
 Een wachtwoord wordt alléén goedgekeurd als:
 
-1. tenminste 3 van de bovenstaande condities true zijn
-2. conditie 4 true is (die moet dus altijd true zijn)
+1. tenminste 3 van de bovenstaande condities `true` zijn
+2. conditie 4 `true` is (die moet dus altijd `true` zijn)
 
 ### Werkwijze
 
