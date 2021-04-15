@@ -9,9 +9,7 @@ const {
 } = require("./script.js");
 
 
-// test("", () => {
-//    expect("").toBe();
-// });
+// test utility functies
 
 // password is niet null
 test("Password is not null: when null should be false", () => {
@@ -78,8 +76,8 @@ test("password has 1 or more numbers: one", () => {
   expect(hasDigit("a")).toBe(false);
 });
 
-// Een wachtwoord wordt alléén goedgekeurd als:
-  //   - tenminste 3 van de bovenstaande condities true zijn
+
+// tenminste 3 condities zijn true
 test("at least 3 conditions are true, minimum requirement", () => {
   const conditions = [true, true, true, false, false];
   expect(minimumConditionsReached(conditions)).toBe(true);
@@ -100,5 +98,28 @@ test("no conditions are true", () => {
   expect(minimumConditionsReached(conditions)).toBe(false);
 });
 
-  //   - conditie 4 (password heeft 1 of meer lowercase karakters) true is (die moet dus altijd true zijn)
 
+// test verifyPassword functie
+test("verify password with minimal correct password", () => {
+  expect(verifyPassword("Ab1")).toBe(true);
+});
+
+test("verify password with no lowercase", () => {
+  expect(verifyPassword("A12BSW7G")).toBe(false);
+});
+
+test("verify password with password too long", () => {
+  expect(verifyPassword("abcdefghi")).toBe(false);
+});
+
+test("verify password only numbers", () => {
+  expect(verifyPassword("123")).toBe(false);
+});
+
+test("verify password with only uppercase", () => {
+  expect(verifyPassword("ABCD")).toBe(false);
+});
+
+test("verify password with only lowercase", () => {
+  expect(verifyPassword("abcd")).toBe(true);
+});
